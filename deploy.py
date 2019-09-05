@@ -1,3 +1,4 @@
+# python deploy.py --num-class 1 --prefix model/model_algo_1 --network resnet-50
 from __future__ import print_function
 import argparse
 import tools.find_mxnet
