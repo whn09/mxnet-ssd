@@ -57,7 +57,7 @@ def parse_args():
                         action='store_true', default=False)
     parser.add_argument('--gpu', dest='gpu_id', type=int, default=0,
                         help='GPU device id to detect with')
-    parser.add_argument('--data-shape', dest='data_shape', type=int, default=512,
+    parser.add_argument('--data-shape', dest='data_shape', type=int, default=300,
                         help='set image shape')
     parser.add_argument('--mean-r', dest='mean_r', type=float, default=123,
                         help='red mean value')
@@ -67,7 +67,7 @@ def parse_args():
                         help='blue mean value')
     parser.add_argument('--thresh', dest='thresh', type=float, default=0.5,
                         help='object visualize score threshold, default 0.6')
-    parser.add_argument('--nms', dest='nms_thresh', type=float, default=0.5,
+    parser.add_argument('--nms', dest='nms_thresh', type=float, default=0.45,
                         help='non-maximum suppression threshold, default 0.5')
     parser.add_argument('--force', dest='force_nms', type=bool, default=True,
                         help='force non-maximum suppression on different class')

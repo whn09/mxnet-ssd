@@ -9,7 +9,7 @@ from symbol.symbol_factory import get_symbol
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Convert a trained model to deploy model')
-    parser.add_argument('--network', dest='network', type=str, default='vgg16_reduced',
+    parser.add_argument('--network', dest='network', type=str, default='resnet50',
                         help='which network to use')
     parser.add_argument('--epoch', dest='epoch', help='epoch of trained model',
                         default=0, type=int)
@@ -19,7 +19,7 @@ def parse_args():
                         help='data shape')
     parser.add_argument('--num-class', dest='num_classes', help='number of classes',
                         default=20, type=int)
-    parser.add_argument('--nms', dest='nms_thresh', type=float, default=0.5,
+    parser.add_argument('--nms', dest='nms_thresh', type=float, default=0.45,
                         help='non-maximum suppression threshold, default 0.5')
     parser.add_argument('--force', dest='force_nms', type=bool, default=True,
                         help='force non-maximum suppression on different class')
